@@ -1,5 +1,5 @@
 # Pfizer_Vaccine_Tweets
- Using supervised and unsupervised learning in conjunction with NLP to explore tweets about the Pfizer COVID-19 vaccine
+ Using supervised and unsupervised learning in conjunction with NLP to explore tweets about the Pfizer COVID-19 vaccine <br>
 ![Wordcloud of Tweets about Pfizer COVID-19 Tweets](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/wordcloud.png)
 
 This dataset is from [Kaggle]('https://www.kaggle.com/gpreda/pfizer-vaccine-tweets'), compiled by user Gabriel Preda. I will be clustering the tweets to find any common themes among them, determining the sentiment of each tweet to see how the general public has reacted to the Pfizer BioNTech vaccine, and finally analyzing how sentiment has changed over time.
@@ -22,7 +22,7 @@ Using Tensorflow Hub's [Universal Sentence Encoder]('https://tfhub.dev/google/un
 The clusters are labeled using the word that occurs most frequently in each cluster. Some interesting labels include "today," "moderna," "dubai," and "ban." The tweets may vary by location since the clustering picked out a few location names.
 <br>
 # Sentiment Analysis
-To determine the sentiment of each tweet, I used [Textblob's](https://textblob.readthedocs.io/en/dev/quickstart.html) Sentiment function:
+To determine the sentiment of each tweet, I used [Textblob's]('https://textblob.readthedocs.io/en/dev/quickstart.html') Sentiment function:
 
 "The sentiment property returns a namedtuple of the form Sentiment(polarity, subjectivity). The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective."
 
