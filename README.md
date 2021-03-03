@@ -24,7 +24,7 @@ The clusters are labeled using the word that occurs most frequently in each clus
 # Sentiment Analysis
 To determine the sentiment of each tweet, I used [Textblob's]('https://textblob.readthedocs.io/en/dev/quickstart.html') Sentiment function:
 
-"The sentiment property returns a namedtuple of the form Sentiment(polarity, subjectivity). The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective."
+>"The sentiment property returns a namedtuple of the form Sentiment(polarity, subjectivity). The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a >float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective."
 
 For this project, I will only be working with polarity.
 <br>
