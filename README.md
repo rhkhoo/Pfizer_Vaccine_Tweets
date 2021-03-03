@@ -9,7 +9,6 @@ This dataset is from [Kaggle](https://www.kaggle.com/gpreda/pfizer-vaccine-tweet
 First, I remove any URLs and symbols from the tweets using Regular Expressions. Then, I convert the date column to a datetime object using pd.to_datetime().
 > tweets['no_url'] = tweets['text'].apply(lambda x: re.split('https:\/\/.*', str(x))[0]) <br>
 > tweets["alpha_num"] = tweets["no_url"].str.replace("[^a-zA-Z ]", "", regex=True)
-> 
  <br> 
  
 I removed the stopwords included in NLTK's English stopwords plus a few that I added, like "vaccine," since these appear in virtually every tweet which would make clustering difficult. 
@@ -25,20 +24,18 @@ The clusters are labeled using the word that occurs most frequently in each clus
 <br>
 
 # Sentiment Analysis
-<br>
-To determine the sentiment of each tweet, I used [Textblob](https://textblob.readthedocs.io/en/dev/api_reference.html) Sentiment function
-<br>
 
+To determine the sentiment of each tweet, I used [Textblob](https://textblob.readthedocs.io/en/dev/api_reference.html) Sentiment function.
 >"The sentiment property returns a namedtuple of the form Sentiment(polarity, subjectivity). The polarity score is a float within the range [-1.0, 1.0]. The subjectivity is a >float within the range [0.0, 1.0] where 0.0 is very objective and 1.0 is very subjective."
 <br>
 For this project, I will only be working with polarity.
 <br>
 The majority of tweets (57%) are neutral, followed by positive (33%), and the minority of tweet are negative (10%). Using these labels, I tried a couple of classifier models to see how we can predict a tweet's opinion of Pfizer's COVID-19 vaccine. RandomForestClassifier is able to predict sentiment with 86% accuracy; the model has difficulty distinguishing between Negative and Neutral. More training data would likely solve this as there is a class imbalance. KNeighborsClassifier is only able to achieve 60% accuracy, which is only achieved by the model predicting the majority class (neutral) for almost the entire test set.
 <br>
+
 ![Dimension-reduced visualization of KMeans clustering](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/neutral.png) <br>
 ![Dimension-reduced visualization of KMeans clustering](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/positive.png)<br>
-![Dimension-reduced visualization of KMeans clustering](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/negative.png)
-<br>
+![Dimension-reduced visualization of KMeans clustering](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/negative.png)<br>
 # Sentiment Over Time
 I also wanted to see how opinions of the vaccine have changed over time
 ![Dimension-reduced visualization of DBSCAN clustering](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/overtime.png) <br>
