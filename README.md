@@ -39,7 +39,7 @@ The majority of tweets (57%) are neutral, followed by positive (33%), and the mi
 # Sentiment Over Time
 I also wanted to see how opinions of the vaccine have changed over time
 ![Dimension-reduced visualization of DBSCAN clustering](https://github.com/rhkhoo/Pfizer_Vaccine_Tweets/blob/main/Images/overtime.png) <br>
-The trends of each type of tweet generally follow the same trend. There is a sharp decrease in all types of tweets on December 25th. Interestingly, the number of total tweets peaks on January 9th, the same day as the Capitol Riots. The sharp decline in the number of tweets approaching January 17th may be due to a data collection error. If the data were collected today, it is possible that this decrease would not be present.<br><br>
+The trends of each type of tweet generally follow the same trend. There is a sharp decrease in all types of tweets on December 25th. The sharp decline in the number of tweets approaching January 17th may be due to a data collection error. If the data were collected today, it is possible that this decrease would not be present.<br><br>
 The Negative tweets have the youngest average account age of 5.75 years. Neutral tweets come from accounts with an average age of 6.15 years, and Positive tweets come from accounts with an average age of 6.96 years. However, the youngest account in each group do not follow this pattern. The Neutral group had the youngest account of only 5 minutes. 
 
 # Conclusion
